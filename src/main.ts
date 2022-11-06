@@ -1,11 +1,8 @@
-import { createApp } from "vue";
+import { createApp } from "vue"
+import "virtual:svg-icons-register"
+import App from "./App.vue"
+import "./style.css"
 
-import "virtual:svg-icons-register";
+const app = createApp(App)
 
-import App from "./App.vue";
-
-import "./style.css";
-
-const app = createApp(App);
-
-app.mount("#app");
+app.mount("#app")
