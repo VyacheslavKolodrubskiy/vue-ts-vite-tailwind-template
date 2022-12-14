@@ -9,3 +9,9 @@
 - `<script setup>`
 
 - [TypeScript](https://www.typescriptlang.org/)
+
+- [eslint](https://eslint.org/)
+
+- [husky](https://typicode.github.io/husky/#/)
+
+- [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
