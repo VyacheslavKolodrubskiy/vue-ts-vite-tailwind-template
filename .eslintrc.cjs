@@ -1,6 +1,12 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
   extends: [
-    '@antfu/eslint-config-vue',
+    'plugin:vue/vue3-essential',
+    'eslint:recommended',
+    '@vue/eslint-config-typescript',
+    '@vue/eslint-config-prettier',
   ],
   ignorePatterns: ['src/auto-imports.d.ts', 'src/components.d.ts'],
   rules: {
@@ -8,13 +14,7 @@ module.exports = {
     'vue/component-tags-order': [
       'error',
       {
-        order: ['template', 'script', 'style'],
-      },
-    ],
-    'vue/html-self-closing': [
-      'error',
-      {
-        svg: 'never',
+        order: ['script', 'template', 'style'],
       },
     ],
     'vue/attributes-order': [
@@ -23,18 +23,20 @@ module.exports = {
         alphabetical: true,
       },
     ],
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        singleline: 2,
-      },
-    ],
     'vue/prefer-import-from-vue': 'error',
     'vue/component-name-in-template-casing': [
       'error',
       'PascalCase',
       {
         registeredComponentsOnly: false,
+      },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        semi: false,
+        singleAttributePerLine: true,
       },
     ],
   },
